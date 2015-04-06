@@ -59,6 +59,10 @@
                     <div class="template_value">${per_cobro}</div>
                 </div>
                 <div class="list_percentage">
+                	<div class="template_label">SKU Activos</div>
+                    <div class="template_value">${per_sku}</div>
+                </div>
+                <div class="list_percentage">
                 	<div class="template_label">Dias Prom. Pago</div>
                     <div class="template_value">${per_dias}</div>
                 </div>
@@ -144,6 +148,7 @@
                             
                             result[i].per_hoy = "L. " + String(result[i].venta.toFixed(2));
                             result[i].per_demanda = "L. " + String(result[i].demanda.toFixed(2));
+                            result[i].per_sku = String(result[i].sku.toFixed(2));
                             result[i].per_dias = String(result[i].dias.toFixed(2));
                         }
                         
