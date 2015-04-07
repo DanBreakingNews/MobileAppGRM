@@ -43,6 +43,9 @@
             			</tr>
             		</table>
                 </div>
+                <div class="report_descp">
+            		Para ver las promociones toque el boton de ver.	
+                </div>
                  <br />
                 </div>
 			</script>
@@ -89,9 +92,9 @@
                         dataType      : repDataType, //Expected data format from server
                         processdata   : repProcessData, //True or False
                         success       : function(msg) {//On Successfull service call
-                            ServiceReport(msg);                    
+                            ServiceReportClc(msg);                    
                         },
-                        error: ServiceNotReport// When Service call fails
+                        error: ServiceNotReportClc// When Service call fails
                         });
                     }
                     catch(err)
@@ -100,7 +103,7 @@
                     }
 			   }
                 
-               function ServiceReport(result) 
+               function ServiceReportClc(result) 
                {
                     try
                     {
@@ -113,11 +116,11 @@
                     }
                     catch(err)
                     {
-                         alert(error.toString());   
+                         alert(err.toString());   
                     }
                }
 
-               function ServiceNotReport(result) 
+               function ServiceNotReportClc(result) 
                {
                     alert("Error en conexión.");
                }
@@ -131,7 +134,15 @@
                function detallePromo( name ) 
                {
                    cartillaNombre = String(name);
-                   app.navigate("boni.html","overlay:left");
+                   if (cartillaTipo1 == 1) 
+                   {	
+                       app.navigate("boni.html","overlay:left");
+                   }
+                   else if ( cartillaTipo1 == 2 )
+                   {
+                       app.navigate("desc.html","overlay:left");   
+                   }
+                   
                }
             </script>
         </div>

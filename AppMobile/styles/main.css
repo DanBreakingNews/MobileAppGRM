@@ -72,6 +72,20 @@ body, html
     margin-right:auto;
     margin-left:auto;
 }
+#tabstrip-desc .km-content 
+{
+    text-align:center;
+    padding-top: .5em;
+    /*
+    background-image:url('../styles/images/background.png');
+    background-position:center; 
+    */
+    background-color: #f0f0f0;
+    height:100%;
+    width:100%;
+    margin-right:auto;
+    margin-left:auto;
+}
 #tabstrip-grafica .km-content 
 {
     text-align:center;
@@ -377,6 +391,16 @@ body, html
     background-color: #c3c3c3;
     color: #404040;
     width: 40%;
+    display: inline-block;
+    border-radius:3px;
+    padding: .3em;
+}
+.template_value_solo
+{
+    text-align: left;
+    background-color: #c3c3c3;
+    color: #404040;
+    width: 94%;
     display: inline-block;
     border-radius:3px;
     padding: .3em;
